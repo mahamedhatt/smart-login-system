@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+
+<body>
+    <div class="container my-5 text-center">
+        <div class="m-auto w-75 p-5 login-container">
+            <h1>Smart Login System</h1>
+            <input type="text" oninput="validation(this)" id="signupName" class="login-input bg-transparent my-3"
+                placeholder="Enter your name">
+            <div class="alert d-none p-1 text-danger">
+                <small>Name must be at least 3 characters long.</small>
+            </div>
+            <input type="text" oninput="validation(this)" id="signupEmail" class="login-input bg-transparent my-3"
+                placeholder="Enter your email">
+            <div class="alert d-none p-1 text-danger">
+                <small>Email must be in a valid format.</small>
+            </div>
+            <input type="password" oninput="validation(this)" id="signupPassword"
+                class="login-input bg-transparent my-3" placeholder="Enter your password">
+            <div class="alert d-none p-1 text-danger">
+                <small>Password must be at least 8 characters long and contain both letters and numbers.</small>
+            </div>
+
+            <!-- for required -->
+            <p id="exist"></p>
+
+            <button class="btn-login w-100 my-3 p-1 text-center" onclick="isEmpty()">Sign Up</button>
+            <div class="my-1">
+                <span class="text-white">You have an account? <a href="index.html" class="link">Signin</a></span>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
